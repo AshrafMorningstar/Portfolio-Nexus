@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashraf Morningstar | Digital Architect</title>
+    <style>
+      :root {
+        --bg: #030305;
+        --glass: rgba(255, 255, 255, 0.05);
+        --border: rgba(255, 255, 255, 0.1);
+        --accent: #00f2fe;
+        --accent-glow: rgba(0, 242, 254, 0.5);
+        --text-main: #ffffff;
+        --text-muted: #8888aa;
+        --font-main: "Inter", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text-main);
+        font-family: var(--font-main);
+        overflow-x: hidden;
+        min-height: 100vh;
+        background-image: radial-gradient(
+            circle at 10% 20%,
+            rgba(76, 29, 149, 0.2) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(0, 242, 254, 0.1) 0%,
+            transparent 40%
+          );
+      }
+
+      /* Hero Section */
+      header {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        letter-spacing: -2px;
+        background: linear-gradient(to right, #fff, #aaa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        animation: fadeIn 1s ease-out;
+      }
+
+      p.subtitle {
+        font-size: 1.5rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        line-height: 1.6;
+        animation: fadeIn 1.2s ease-out;
+      }
+
+      /* Grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 4rem 8vw;
+      }
+
+      .card {
+        background: var(--glass);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: var(--accent);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5),
+          0 0 20px var(--accent-glow);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      .card .tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-xs: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 100px;
+        border: 1px solid var(--border);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 4rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border);
+        margin-top: 4rem;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Decorative Blur */
+      .blur-orb {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: var(--accent);
+        filter: blur(150px);
+        opacity: 0.1;
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blur-orb" style="top: -100px; left: -100px"></div>
+    <div
+      class="blur-orb"
+      style="bottom: -100px; right: -100px; background: purple"
+    ></div>
+
+    <header>
+      <h1>Ashraf Morningstar</h1>
+      <p class="subtitle">Architect of the Digital Void.</p>
+      <p style="margin-top: 20px; color: var(--accent); font-family: monospace">
+        // 18 PREMIUM EXPERIENCES DEPLOYED
+      </p>
+    </header>
+
+    <div class="grid">
+      <!-- Beginner Projects (Level 1) -->
+      <a href="https://github.com/AshrafMorningstar/ChronoCard" class="card">
+        <h3>ChronoCard</h3>
+        <p>Time, reimagined. A glassmorphic digital clock.</p>
+        <span class="tag">Alpha</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/MoodScroll" class="card">
+        <h3>MoodScroll</h3>
+        <p>Infinite emotional scrolling engine.</p>
+        <span class="tag">Alpha</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/SilentNav" class="card">
+        <h3>SilentNav</h3>
+        <p>Stealth navigation system for dashboards.</p>
+        <span class="tag">Alpha</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/PersonaTiles" class="card">
+        <h3>PersonaTiles</h3>
+        <p>Dynamic masonry identity grid.</p>
+        <span class="tag">Alpha</span>
+      </a>
+      <a
+        href="https://github.com/AshrafMorningstar/AmbientLanding"
+        class="card"
+      >
+        <h3>AmbientLanding</h3>
+        <p>Atmospheric entry point with soundscapes.</p>
+        <span class="tag">Alpha</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/404Museum" class="card">
+        <h3>404Museum</h3>
+        <p>Turning errors into high art.</p>
+        <span class="tag">Alpha</span>
+      </a>
+
+      <!-- Environment Projects (Level 2) -->
+      <a href="https://github.com/AshrafMorningstar/ThemeSmith" class="card">
+        <h3>ThemeSmith</h3>
+        <p>Real-time CSS variable manipulation engine.</p>
+        <span class="tag">Beta</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/WindowedWeb" class="card">
+        <h3>WindowedWeb</h3>
+        <p>Desktop OS simulation in the cloud.</p>
+        <span class="tag">Beta</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/EchoForms" class="card">
+        <h3>EchoForms</h3>
+        <p>Conversational, high-conversion inputs.</p>
+        <span class="tag">Beta</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/DataVeil" class="card">
+        <h3>DataVeil</h3>
+        <p>Cyberpunk privacy visualization dashboard.</p>
+        <span class="tag">Beta</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/MotionGrammar" class="card">
+        <h3>MotionGrammar</h3>
+        <p>Physics-based animation language.</p>
+        <span class="tag">Beta</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/OfflineRitual" class="card">
+        <h3>OfflineRitual</h3>
+        <p>Zen focus PWA with sync capabilities.</p>
+        <span class="tag">Beta</span>
+      </a>
+
+      <!-- Expert Projects (Level 3) -->
+      <a href="https://github.com/AshrafMorningstar/BrowserOSLite" class="card">
+        <h3>BrowserOSLite</h3>
+        <p>Full OS simulation. Files, Apps, Power.</p>
+        <span class="tag">Omega</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/Timefold" class="card">
+        <h3>Timefold</h3>
+        <p>4D Project Management Architecture.</p>
+        <span class="tag">Omega</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/NeuralUI" class="card">
+        <h3>NeuralUI</h3>
+        <p>Brain-Computer Interface Design System.</p>
+        <span class="tag">Omega</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/AtlasWeb" class="card">
+        <h3>AtlasWeb</h3>
+        <p>WebGL 3D Global Data Visualization.</p>
+        <span class="tag">Omega</span>
+      </a>
+      <a href="https://github.com/AshrafMorningstar/Sentinel" class="card">
+        <h3>Sentinel</h3>
+        <p>Military-grade security dashboard.</p>
+        <span class="tag">Omega</span>
+      </a>
+      <a
+        href="https://github.com/AshrafMorningstar/GhostPortfolio"
+        class="card"
+      >
+        <h3>GhostPortfolio</h3>
+        <p>Shadow finance tracker. Invisible assets.</p>
+        <span class="tag">Omega</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>© 2025 Ashraf Morningstar. The Code Must Flow.</p>
+    </footer>
+  </body>
+</html>
